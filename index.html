@@ -42,7 +42,7 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <button class="bg-accent text-primary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 shadow-md">
+                    <button onclick="scrollToContact()" class="bg-accent text-primary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 shadow-md">
                         Schedule a Free Consultation
                     </button>
                 </div>
@@ -60,7 +60,7 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-4">
-                    <button class="bg-accent text-primary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 shadow-md w-full">
+                    <button onclick="scrollToContact()" class="bg-accent text-primary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition-colors duration-200 shadow-md w-full">
                         Schedule a Free Consultation
                     </button>
                 </div>
@@ -78,7 +78,7 @@
             <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
                 We build custom AI and automation solutions that streamline your workflows, cut costs, and drive growth.
             </p>
-            <button class="bg-accent text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button onclick="scrollToContact()" class="bg-accent text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Schedule a Free Consultation
             </button>
         </div>
@@ -305,6 +305,17 @@
                 }
             });
         });
+
+        // Function to scroll to contact form
+        function scrollToContact() {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
 
         // Form submission handling
         document.querySelector('form').addEventListener('submit', function(e) {
