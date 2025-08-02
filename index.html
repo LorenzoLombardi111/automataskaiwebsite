@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutomataskAi - AI Automation Solutions</title>
+    <title>AutomataskAi - AI Automation Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
@@ -11,10 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2D2D2D',
-                        accent: '#FFDE59',
-                        secondary: '#C4B7A6',
-                        tertiary: '#CCCCCC'
+                        primary: '#1a1a1a',
+                        accent: '#fbbf24',
+                        'gray-light': '#f8f9fa'
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif']
@@ -24,19 +23,9 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #FFDE59 0%, #FFE066 100%);
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
+        body { font-family: 'Inter', sans-serif; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-white text-primary">
@@ -47,7 +36,9 @@
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
                     <!-- Company Logo -->
-                    <img src="logo.png" alt="AutomataskAi Logo" class="w-10 h-10 object-contain">
+                    <div class="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
+                        <img src="logo.png" alt="AutomataskAi Logo" class="w-8 h-8 object-contain" onload="console.log('Logo loaded successfully');" onerror="console.log('Logo failed to load, showing fallback'); this.style.display='none'; this.parentElement.innerHTML='<svg class=\'w-6 h-6 text-primary\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z\'></path></svg>';">
+                    </div>
                     <div class="text-2xl font-bold text-primary">
                         AutomataskAi
                     </div>
